@@ -7,7 +7,8 @@
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
-/>
+    />
+    
     <style>
         *{margin: 0;
           padding: 0;
@@ -24,10 +25,10 @@
             border-radius: 10px;
             height: 230px;
             width: 400px;
-            position:absolute;
+            position:fixed;
             top: 50%;
             left:50%;
-            transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%) scale(1);
             
         }
         form{
@@ -66,22 +67,25 @@
             padding-left: 20px;
             cursor: pointer;
         }
-        h2{
+        h2 a{
             font-size: 15px;
             color: rgb(229, 229, 229);;
             padding-left: 145px;
             padding-top: 10px;
         }
         #nav{
-            background-color: rgb(149, 144, 156);
+            position: fixed;
+            background-color: rgba(144, 156, 158, 0.966);
             height: 50px;
+            width: 100%;
             font-size: 30px;
             font-weight: 900;
-            display:flex;
             padding-left: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            
+            
         }
         #acc{
             font-size: 10px;
@@ -93,6 +97,26 @@
         }
         a{
             text-decoration: none;
+        }
+
+        @media (max-width : 380px) {
+            #menu {
+                    font-size: 15px;
+            }
+            #acc h1{
+                font-size: 10px;
+            }
+            #nav{
+                height: 20px;
+            }
+            img{
+                height: 700px;
+                object-fit: cover;
+            }
+            #main{
+                height: 220px;
+                width: 300px;
+            }
         }
     </style>
 </head>
@@ -119,7 +143,8 @@
         <div id="but">
             <button> Sign in</button>
         </div>
-        <h2>Forgot password?<h2>
+        <h2><a href="">Forgot password?<a><h2>
     </div>
+   
 </body>
 </html>
